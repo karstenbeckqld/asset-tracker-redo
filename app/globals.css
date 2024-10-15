@@ -25,3 +25,25 @@ body {
     text-wrap: balance;
   }
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr:nth-child(odd){
+  background-color: #2f2e2e;
+  border-right: 0;
+  border-left: 0;
+}
+
+.percent-indicator{
+  position: relative;
+}
+
+.percent {
+  position: absolute; 
+  top: -16px; 
+  left: 100%;
+  transform: translateX(-100%);
+}

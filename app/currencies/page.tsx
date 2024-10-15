@@ -1,9 +1,11 @@
 import React from 'react'
-import useTokens from "@/app/react-query/hooks/useTokens";
+import useCurrencies from "@/app/react-query/hooks/useCurrencies";
+import CurrencyList from "@/app/components/CurrencyList";
+// import CryptoCurrency from '../components/Currency';
 
-const Currencies = () => {
+const CurrenciesPage = () => {
 
-    const {data, error} = useTokens();
+    const {data, error} = useCurrencies();
 
     if (error) return <div>Error fetching data</div>
 
@@ -11,15 +13,10 @@ const Currencies = () => {
         <>
             <div>Currencies</div>
             <div>
-                {data?.map((token) => (
-                    <div key={token.cmc_rank}>
-                        <div>{token.name}</div>
-                        <div>{token.symbol}</div>
-                    </div>
-                ))}
+                {data ? <CurrencyList cryptoData={data} /> : []}
             </div>
         </>
-                    )
+    )
 }
 
-export default Currencies
+export default CurrenciesPage;
