@@ -97,7 +97,7 @@ const CurrencyList = ({ cryptoData }: Props) => {
                     </thead>
                     <tbody>
                         {filteredData.map((token) => (
-                            <tr className='h-10' key={token.cmc_rank}>
+                            <tr className='h-12 py-6' key={token.cmc_rank}>
                                 <td className='pl-2'>{token.cmc_rank}</td>
                                 <td> <div className='flex flex-row justify-start gap-2 items-center'>
                                     <Image
@@ -109,9 +109,9 @@ const CurrencyList = ({ cryptoData }: Props) => {
                                     />
                                     <div className='order-2 my-auto'>
                                         <p className='order-1 text-sm font-bold'>{token.symbol.toUpperCase()}</p>
-                                        <p className='order-2 text-[#707070]'>{showBillionOrMillion(token.quote.USD.market_cap)}</p></div>
+                                        <p className='order-2 text-xs text-[#707070]'>{showBillionOrMillion(token.quote.USD.market_cap)}</p></div>
                                 </div></td>
-                                <td>${token.quote.USD.price.toFixed(2)}</td>
+                                <td className='text-right pr-5'>${token.quote.USD.price.toFixed(2)}</td>
                                 <td>
                                     <div className="percent-indicator">
                                         <ChangeIndicator token={token} />

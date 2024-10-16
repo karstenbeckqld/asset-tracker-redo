@@ -6,7 +6,7 @@ interface ChangeIndicatorProps {
     token: CryptoData;
 }
 
-const changeStyles = 'percent flex items-center justify-center w-24 gap-2 h-8 my-auto rounded-lg px-2 py-2 text-center font-bold';
+const changeStyles = 'percent flex items-center justify-center w-20 gap-2 my-auto py-1 px-1 rounded-lg text-sm text-center font-bold';
 
 const removeMinus = (value: number) => {
     const stringValue = value.toFixed(2);
