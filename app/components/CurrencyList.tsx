@@ -70,7 +70,7 @@ const CurrencyList = ({ cryptoData }: Props) => {
                         setSearchQuery={setSearchQuery}
                     />
                 </div>
-                <table className='width-auto border border-slate-500'>
+                <table className='width-auto'>
                     <thead className='h-10 bg-[#0f0909]'>
                         <tr>
                             <th className='border-b border-slate-700 pl-2 text-left'>
@@ -99,7 +99,7 @@ const CurrencyList = ({ cryptoData }: Props) => {
                         {filteredData.map((token) => (
                             <tr className='h-10' key={token.cmc_rank}>
                                 <td className='pl-2'>{token.cmc_rank}</td>
-                                <td> <div className='flex flex-row justify-start gap-2 items-center w-1/3'>
+                                <td> <div className='flex flex-row justify-start gap-2 items-center'>
                                     <Image
                                         className='order-1'
                                         src={`/images/svg/${token.symbol.toLowerCase()}.svg`}
@@ -111,7 +111,7 @@ const CurrencyList = ({ cryptoData }: Props) => {
                                         <p className='order-1 text-sm font-bold'>{token.symbol.toUpperCase()}</p>
                                         <p className='order-2 text-[#707070]'>{showBillionOrMillion(token.quote.USD.market_cap)}</p></div>
                                 </div></td>
-                                <td>{token.quote.USD.price.toFixed(2)}</td>
+                                <td>${token.quote.USD.price.toFixed(2)}</td>
                                 <td>
                                     <div className="percent-indicator">
                                         <ChangeIndicator token={token} />
