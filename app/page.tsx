@@ -1,4 +1,4 @@
-'use client'; // Ensuring client-side rendering
+'use client';
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ChakraProvider } from '@chakra-ui/react'

@@ -30,6 +30,8 @@ const showBillionOrMillion = (value: number) => {
 
 const CurrencyList = ({cryptoData}: Props) => {
 
+    console.log(sort([1, 5, 3, 4, 2]).asc()); // Test sorting with a simple array
+
     // const [sortKey, setSortKey] = useState('cmc_rank');
     const [order, setOrder] = useState<string>('asc');
     const [sortedData, setSortedData] = useState<CryptoData[]>(cryptoData);
